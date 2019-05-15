@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import NewsList from '../news/NewsList.js';
-
+import { getNewsSource } from '../../services/newsService'
 class Corpo extends Component {
 
     constructor(props){
         super(props)
 
         this.state = {
-            listas : [{name:'jose'},{name:'g1'},{name:'desgraca'}]
+            listas : getNewsSource()
         }
     }
 
@@ -16,7 +16,7 @@ class Corpo extends Component {
             <div id="container">
             {
                 this.state.listas.map((lista)=>
-                (<NewsList name={ lista.name } />)
+                (<NewsList name={ lista.title } />)
                 )
             }
 
