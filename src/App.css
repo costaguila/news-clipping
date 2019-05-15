@@ -9,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #42aaff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,4 +30,31 @@
   to {
     transform: rotate(360deg);
   }
+}
+.cabecalho{
+    background-color: #75c1ff;
+}
+.cabecalho h1{
+    margin: 0px;
+}
+/*Components - Corpo*/
+#container{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+#container p {
+    margin: 3px;
+}
+/*Components - news*/
+.newsSource{
+    text-align: left;
+    background-color: #9cbbbf;
+}
+.newssourceHeader{
+    text-transform: capitalize;
+    margin: 15px 0px 15px 0px
+}
+.newssourceHeader h1{
+    margin: 0px;
+    background-color: #42aaff;
 }
