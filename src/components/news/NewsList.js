@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-
+import NewsItem from './News_item';
+import { getNewsById } from '../../services/newsService';
 
 class NewsList extends Component {
 
     constructor(props){
         super(props)
         this.state = {
-            itens: [],
-            name: props.name ? props.name : 'Nao informado'
+            fonte: props.fonteNoticias,
+            itens: getNewsById(props.fonteNoticias.id),
+            name: props.fonteNoticias.title ? props.fonteNoticias.title : 'Nao informado'
         }
     }
 
@@ -15,7 +17,9 @@ class NewsList extends Component {
         return (
             <div className="newsSource">
                 <div className="newssourceHeader"><h1># {this.state.name}</h1></div>
-                <div className="newsItem">{this.state.itens.map(item=>(<p>{item.title}</p>))}</div>
+                    {
+                    this.state.itens.map(selectedItem=>(<NewsItem item={ selectedItem } />))
+                    }
             </div>
         );
     }
