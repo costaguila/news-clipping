@@ -9,7 +9,7 @@ import Corpo from './components/page_structure/Corpo'
 function App() {
   return (
     <div className="App">
-        <Header />
+        <Header titulo="Clipping de noticias recentes"/>
         <Corpo />
     </div>
   );
