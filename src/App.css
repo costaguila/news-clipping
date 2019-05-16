@@ -5,8 +5,7 @@
 .App{
     min-height: 100vh;
     padding-bottom: 2vh;
-    background-color: transparent;
-    background-image: repeating-linear-gradient(25deg, #465298, #465298 20px,#e6e6ff 20px, #e6e6ff 25px);
+    background-color: #e3afbc;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -38,7 +37,8 @@
   }
 }
 .cabecalho{
-    background-color: #0073e6;
+    background-color: #5d001e;
+    color: white;
     padding: 10px 0px;
 }
 .cabecalho h1{
@@ -55,15 +55,34 @@
 /*Components - news*/
 .newsSource{
     text-align: left;
-    background-color: #9cbbbf;
+    background-color: #e3e2df;
     min-height: 70px;
-
+    margin: 15px 2.5px 15px 2.5px;
+    border: 2px solid black;
+}
+.newsSource:hover{
+    border: 2px solid #ee4c7c;
 }
 .newssourceHeader{
     text-transform: capitalize;
-    margin: 15px 0px 15px 0px
 }
 .newssourceHeader h1{
     margin: 0px;
-    background-color: #0073e6;
+    background-color: #9a1750;
+    color: white;
+}
+.newssourceContainer{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+.newsItem{
+    flex: 1;
+    text-align: center;
+    border: 0.1em dotted black;
+    margin: 10px;
+    padding: 5px;
+}
+.newsItem:hover{
+    background-color: #e3afbc;
 }

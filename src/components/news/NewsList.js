@@ -17,9 +17,11 @@ class NewsList extends Component {
         return (
             <div className="newsSource">
                 <div className="newssourceHeader"><h1># {this.state.name}</h1></div>
+                <div className="newssourceContainer">
                     {
                     this.state.itens.map(selectedItem=>(<NewsItem item={ selectedItem } />))
                     }
+                </div>
             </div>
         );
     }
