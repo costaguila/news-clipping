@@ -16,7 +16,7 @@ class Corpo extends Component {
             <div id="container">
             {
                 this.state.listas.map((lista)=>
-                (<NewsList fonteNoticias={ lista } />)
+                (<NewsList key={lista.id} fonteNoticias={ lista } />)
                 )
             }
 

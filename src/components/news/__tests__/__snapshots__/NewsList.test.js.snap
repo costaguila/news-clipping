@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewsList /> Deve possuir um titulo # g1 1`] = `
+<div
+  class="newsSource"
+>
+  <div
+    class="newssourceHeader"
+  >
+    <h1>
+      # g1
+    </h1>
+  </div>
+  <div
+    class="newssourceContainer"
+  >
+    <div
+      class="newsItem"
+    >
+      <img
+        alt="Imagem nao fornecida"
+        src="royalty-free-music-videos.jpg"
+      />
+      <p>
+        Guerra na síria
+      </p>
+    </div>
+    <div
+      class="newsItem"
+    >
+      <img
+        alt="Imagem nao fornecida"
+        src="royalty-free-music-videos.jpg"
+      />
+      <p>
+        José falou com a ana
+      </p>
+    </div>
+  </div>
+</div>
+`;
