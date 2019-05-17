@@ -10,7 +10,7 @@ class Cabecalho extends Component {
     }
     render(){
         return (
-            <div class="cabecalho">
+            <div className="cabecalho">
             <h1>{this.state.titulo}</h1>
             </div>
         );
