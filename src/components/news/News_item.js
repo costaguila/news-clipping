@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import thumb from './royalty-free-music-videos.jpg'
 
 class NewsItem extends Component {
 
@@ -13,6 +13,7 @@ class NewsItem extends Component {
     render(){
         return (
                 <div className="newsItem">
+                    <img src={thumb} alt="Imagem nao fornecida" />
                     <p>{this.state.item.title}</p>
                 </div>
         );

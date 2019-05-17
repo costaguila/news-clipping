@@ -77,11 +77,12 @@
     justify-content: center;
 }
 .newsItem{
-    flex: 1;
     text-align: center;
     border: 0.1em dotted black;
     margin: 10px;
     padding: 5px;
+}.newsItem img{
+    max-height: 200px;
 }
 .newsItem:hover{
     background-color: #e3afbc;
