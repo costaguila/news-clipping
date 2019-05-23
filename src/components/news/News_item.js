@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import thumb from './royalty-free-music-videos.jpg'
+import thumb from './no_image.png'
 
 class NewsItem extends Component {
 
