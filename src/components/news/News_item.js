@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import thumb from './no_image.png'
-var thumb = 'royalty-free-music-videos.jpg'
+var thumb = 'royalty-free-musi-erro-rc-videos.jpg'
 class NewsItem extends Component {
 
     constructor(props){
