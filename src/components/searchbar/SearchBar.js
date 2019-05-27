@@ -18,7 +18,7 @@ class SearchBar extends Component {
 
     render(){
         return (
-            <form>
+            <form className="filterItens">
                 <label>Busca de notícias:
                     <input type="text" value={this.state.value} onChange={this.handleChange} />
                 </label>

@@ -14,7 +14,7 @@ class NewsList extends Component {
             fontes: fontes,
             fontesFiltradas: fontes,
             itens: getNews(),
-            searchbar: props.searchbar? props.searchbar : true 
+            searchbar: props.searchbar? props.searchbar : true
         }
     }
 
@@ -33,7 +33,7 @@ class NewsList extends Component {
 
     render(){
         return (
-            <div id="">
+            <div key='listaDeNoticias'>
                 <SearchBar filterListas={this.filterListas.bind(this)} />
                 {this.state.fontesFiltradas.map(fonte =>(
                     <div className="newsSource" key={fonte.id} >

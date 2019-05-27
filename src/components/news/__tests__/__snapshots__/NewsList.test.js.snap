@@ -1,43 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NewsList /> 1 + 1 = 2 1`] = `2`;
-
 exports[`<NewsList /> Deve possuir um titulo # g1 1`] = `
-<div
-  class="newsSource"
->
-  <div
-    class="newssourceHeader"
+<div>
+  <form
+    class="filterItens"
   >
-    <h1>
-      # g1
-    </h1>
+    <label>
+      Busca de notícias:
+      <input
+        type="text"
+        value=""
+      />
+    </label>
+  </form>
+  <div
+    class="newsSource"
+  >
+    <div
+      class="newssourceHeader"
+    >
+      <h1>
+        # g1
+      </h1>
+    </div>
+    <div
+      class="newssourceContainer"
+    >
+      <div
+        class="newsItem"
+      >
+        <img
+          alt="Imagem nao fornecida"
+          src="royalty-free-musi-erro-rc-videos.jpg"
+        />
+        <p>
+          Guerra na síria
+        </p>
+      </div>
+      <div
+        class="newsItem"
+      >
+        <img
+          alt="Imagem nao fornecida"
+          src="royalty-free-musi-erro-rc-videos.jpg"
+        />
+        <p>
+          José falou com a ana
+        </p>
+      </div>
+    </div>
   </div>
   <div
-    class="newssourceContainer"
+    class="newsSource"
   >
     <div
-      class="newsItem"
+      class="newssourceHeader"
     >
-      <img
-        alt="Imagem nao fornecida"
-        src="royalty-free-music-videos.jpg"
-      />
-      <p>
-        Guerra na síria
-      </p>
+      <h1>
+        # wsj
+      </h1>
     </div>
     <div
-      class="newsItem"
+      class="newssourceContainer"
     >
-      <img
-        alt="Imagem nao fornecida"
-        src="royalty-free-music-videos.jpg"
-      />
-      <p>
-        José falou com a ana
-      </p>
+      <div
+        class="newsItem"
+      >
+        <img
+          alt="Imagem nao fornecida"
+          src="royalty-free-musi-erro-rc-videos.jpg"
+        />
+        <p>
+          José resolveu chamado
+        </p>
+      </div>
     </div>
+  </div>
+  <div
+    class="newsSource"
+  >
+    <div
+      class="newssourceHeader"
+    >
+      <h1>
+        # hacker news
+      </h1>
+    </div>
+    <div
+      class="newssourceContainer"
+    >
+      <div
+        class="newsItem"
+      >
+        <img
+          alt="Imagem nao fornecida"
+          src="royalty-free-musi-erro-rc-videos.jpg"
+        />
+        <p>
+          Ana pediu açai de 500ml
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="newsSource"
+  >
+    <div
+      class="newssourceHeader"
+    >
+      <h1>
+        # The Nation
+      </h1>
+    </div>
+    <div
+      class="newssourceContainer"
+    />
   </div>
 </div>
 `;
