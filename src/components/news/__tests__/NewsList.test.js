@@ -14,4 +14,12 @@ describe('<NewsList />', () => {
     expect(header[0]['children'][0].data).toEqual('# g1')
     expect(component).toMatchSnapshot();
   });
+  it('1 + 1 = 2', () => {
+    //arrange
+    let result = 0
+    //act
+    result = 1+1
+    //assert
+    expect(result).toMatchSnapshot(2);
+  });
 });
