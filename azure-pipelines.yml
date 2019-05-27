@@ -12,7 +12,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '99.x'
+    versionSpec: '9.x'
   displayName: 'Install Node.js'
 
 - script: |
@@ -27,7 +27,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '$(System.DefaultWorkingDirectory)/junit.xml' 
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/junit.xml'
     #searchFolder: '$(System.DefaultWorkingDirectory)' # Optional
     #mergeTestResults: false # Optional
     #failTaskOnFailedTests: false # Optional
