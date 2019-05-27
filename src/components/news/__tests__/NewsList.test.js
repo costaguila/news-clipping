@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow, render } from 'enzyme';
+import { render } from '../../../setupTests';
 
 import NewsList from '../NewsList';
 
