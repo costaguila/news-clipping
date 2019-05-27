@@ -25,6 +25,7 @@ steps:
 
 # Publish Test Results
 - task: PublishTestResults@2
+    condition: succeededOrFailed()
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '$(System.DefaultWorkingDirectory)/junit.xml'
