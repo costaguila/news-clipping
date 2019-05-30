@@ -11,7 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "jest -- --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,7 +41,16 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-  ],
-  "reporters": [ "default", "jest-junit" ]
+    ],
+    "reporters": [ "default", "jest-junit" ],
+    "collectCoverage": true,
+    "coverageReporters":["text","html"],
+    "collectCoverageFrom": [
+      "**/src/*/*.{js,jsx}"
+    ],
+    "coverageDirectory": "testes/coverage/"
+  },
+  "jest-junit": {
+      "output": "testes/junit/junit.xml"
   }
 }

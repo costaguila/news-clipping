@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NewsList /> Deve possuir um titulo # g1 1`] = `
+exports[`<NewsList /> [UNIT] - Deve possuir um titulo # g1 1`] = `
 <div>
   <form
     class="filterItens"
