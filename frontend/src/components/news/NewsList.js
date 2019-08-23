@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import NewsItem from './News_item';
 import SearchBar from '../searchbar/SearchBar';
@@ -9,13 +10,20 @@ class NewsList extends Component {
 
     constructor(props){
         super(props)
-        let fontes = getNewsSource();
+        let fontes = [];
+        let noticias = [];
         this.state = {
             fontes: fontes,
             fontesFiltradas: fontes,
-            itens: getNews(),
-            searchbar: props.searchbar? props.searchbar : true
+            itens: noticias,
+            searchbar: props.searchbar ? props.searchbar : true
         }
+    }
+
+    componentDidMount(){
+      axios.all([getNews(),getNewsSource()]).then(axios.spread((noticias,fontes)=>{
+        this.setState({itens:noticias, fontes:fontes, fontesFiltradas:fontes})
+      }))
     }
 
     getFonteName(title){
@@ -24,7 +32,7 @@ class NewsList extends Component {
 
     filterListas(name) {
         if (name !== ""){
-            let filtro = this.state.fontes.filter(x => x.title.toUpperCase().match(name.toUpperCase()));
+            let filtro = this.state.fontes.filter(x => x.name.toUpperCase().match(name.toUpperCase()));
             this.setState( {fontesFiltradas: filtro} );
         }else{
             this.setState( {fontesFiltradas: this.state.fontes} );
@@ -36,11 +44,11 @@ class NewsList extends Component {
             <div key='listaDeNoticias'>
                 <SearchBar filterListas={this.filterListas.bind(this)} />
                 {this.state.fontesFiltradas.map(fonte =>(
-                    <div className="newsSource" key={fonte.id} >
-                        <div className="newssourceHeader"><h1># {this.getFonteName(fonte.title)}</h1></div>
+                    <div className="newsSource" key={fonte.name} >
+                        <div className="newssourceHeader"><h1># {this.getFonteName(fonte.name)}</h1></div>
                         <div className="newssourceContainer">
                             {this.state.itens
-                                .filter(noticias => noticias.id === fonte.id)
+                                .filter(noticias => noticias.spider === fonte.name)
                                 .map(item => (<NewsItem item={item}/>))
                             }
                         </div>
