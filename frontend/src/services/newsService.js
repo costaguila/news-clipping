@@ -9,7 +9,6 @@ export function getNewsSource(){
 }
 export function getNews(){
     return  axios.get(NEWS_ENDPOINT).then(response => {
-      console.log(response.data)
       return response.data
     })
 }

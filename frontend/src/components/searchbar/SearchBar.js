@@ -6,6 +6,7 @@ class SearchBar extends Component {
         super(props)
         this.state = {
             callback: props.filterListas,
+            legenda: props.legenda ? props.legenda : 'Busca de notícias',
             value: ''
         }
         this.handleChange = this.handleChange.bind(this);
@@ -19,7 +20,7 @@ class SearchBar extends Component {
     render(){
         return (
             <form className="filterItens">
-                <label>Busca de notícias:
+                <label>{this.state.legenda}:
                     <input type="text" value={this.state.value} onChange={this.handleChange} />
                 </label>
             </form>
