@@ -7,8 +7,12 @@ news = Blueprint('news',__name__)
 
 @news.route('/api/news',methods=['GET'])
 def get_news():
+    data = []
     news_collection = mongo.db.noticias
-    data = list(news_collection.find())
+
+    spiders = news_collection.distinct('spider')
+    for spider in spiders:
+        data += list( news_collection.find({'spider': spider}).limit(5) )
     data = dumps(data, json_options=CANONICAL_JSON_OPTIONS)
 
     return Response(data,mimetype='application/json')
