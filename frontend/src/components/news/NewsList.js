@@ -23,7 +23,7 @@ class NewsList extends Component {
 
     componentDidMount(){
       axios.all([getNews(),getNewsSource()]).then(axios.spread((noticias,fontes)=>{
-        this.setState({itens:noticias, fontes:fontes, fontesFiltradas:fontes})
+        this.setState({itens:noticias,itensFiltrados:noticias, fontes:fontes, fontesFiltradas:fontes})
       }))
     }
 

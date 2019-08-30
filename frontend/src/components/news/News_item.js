@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-//import thumb from './no_image.png'
-var thumb = 'royalty-free-musi-erro-rc-videos.jpg'
+import thumb from './no_image.png'
+
 class NewsItem extends Component {
 
     constructor(props){
@@ -32,7 +32,7 @@ class NewsItem extends Component {
         return (
                 <div className="newsItem">
                       <div id="image_container">
-                        <img src={this.state.item.image} alt="Imagem não fornecida"/>
+                        <img src={this.state.item.image ? this.state.item.image : thumb } alt="Imagem não fornecida"/>
                       </div>
                       <div id="content">
                         <h2>{this.state.item.title}</h2>
